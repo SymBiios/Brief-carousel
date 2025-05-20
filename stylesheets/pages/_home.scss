@@ -1,23 +1,70 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 20px;
+}
+
 .carousel-slides figure {
   position: absolute;
   opacity: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .carousel-slides figure.active {
   opacity: 1;
 }
 
-.carousel-slides {
-  position: relative;
-  width: 600px;
-  height: 300px;
+.carousel-slides figure img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
 }
 
-.prev-image {
-  margin-top: 100px;
+.carousel-container button {
+  margin: 0 10px;
+}
+
+.prev-image,
+.next-image {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.buttons-container {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttons-container button {
+  margin: 0 5px;
 }
